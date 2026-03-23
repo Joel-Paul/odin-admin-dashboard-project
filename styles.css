@@ -7,7 +7,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 7fr;
 }
 
 .sidebar {
@@ -26,6 +26,35 @@ body {
 
 .header {
     background: #ffffff;
+    padding: 32px 32px 0px 32px;
+}
+
+.header .top {
+    display: grid;
+}
+
+.header .bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.bottom .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 24px;
+    justify-self: end;
+    padding-right: 32px;
+}
+
+.buttons > button {
+    padding: 10px;
+    border-radius: 32px;
+    border-style: none;
+    color: #ffffff;
+    background-color: #1992d4;
+    width: 100px;
 }
 
 .content {
@@ -36,7 +65,7 @@ body {
     padding: 32px;
 }
 
-.projects {
+.content .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1rem;
