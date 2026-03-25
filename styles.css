@@ -57,21 +57,29 @@ body {
 
 .header {
     background: #ffffff;
-    padding: 16px 32px 0px 32px;
+    padding: 16px 64px 4px 32px;
 }
 
 .header .top {
     display: grid;
-    grid-template-columns: max-content 2fr max-content 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.top .icon {
+    width: 24px;
+}
+
+.top .search {
+    display: grid;
+    grid-template-columns: max-content 1fr;
     align-items: center;
 }
 
-.top img {
-    width: 24px;
+.search .icon {
     padding-right: 16px;
 }
 
-.top input {
+.search input {
     width: 100%;
     max-width: 512px;
     border-radius: 24px;
@@ -80,11 +88,37 @@ body {
     padding: 8px;
 }
 
+.top .me {
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    align-items: center;
+    gap: 24px;
+}
+
+.me .icon {
+    justify-self: right;
+}
+
+.me .profile {
+    width: 48px;
+}
+
+.me h3 {
+}
+
 .header .bottom {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: max-content 2fr 1fr;
     gap: 16px;
     align-items: center;
+}
+
+.bottom img {
+    width: 80px;
+}
+
+.bottom h2, .bottom p {
+    margin: 0;
 }
 
 .bottom .buttons {
@@ -92,7 +126,6 @@ body {
     grid-template-columns: repeat(3, 100px);
     gap: 24px;
     justify-self: end;
-    padding-right: 32px;
 }
 
 .buttons > button {
@@ -173,20 +206,31 @@ body {
 }
 
 .feed .trending {
+    display: grid;
+    gap: 16px;
+
     background: #ffffff;
     padding: 16px;
     border-radius: 8px;
 }
 
-.trender h4 {
+.trending .trender {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 8px;
+}
+
+.trender img {
+    width: 48px;
+    grid-row: 1 / -1;
+    align-self: center;
+}
+
+.trender h4, .trender p {
     margin: 0;
 }
 
-.trender p {
-    margin-top: 2px;
-    margin-bottom: 16px;
-}
-
-.trender:last-child p {
-    margin-bottom: 0;
+.trender h4 {
+    align-self: end;
 }
